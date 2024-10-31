@@ -1,0 +1,14 @@
+<!--Keyup es un evento de Angular para obtener la
+informacion de la caja de texto o reconocer al hacer clic
+en cada letra del teclado, va entrando letra por letra-->
+<!--keyup.enter es el mismo evento de Angular para
+obtener la informacion de la caja de texto, pero a diferencia
+del otro evento, keyup.enter al estar escribiendo y al dar enter
+entra la palabra completa-->
+<input
+  type="text"
+  [placeholder]="placeholder"
+  class="form-control"
+  (keyup.enter)="emitValue( txtInput.value )"
+  #txtInput
+/>
