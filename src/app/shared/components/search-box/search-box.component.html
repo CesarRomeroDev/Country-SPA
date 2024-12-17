@@ -5,10 +5,12 @@ en cada letra del teclado, va entrando letra por letra-->
 obtener la informacion de la caja de texto, pero a diferencia
 del otro evento, keyup.enter al estar escribiendo y al dar enter
 entra la palabra completa-->
+<!-- (keyup.enter)="emitValue( txtInput.value )" -->
 <input
   type="text"
-  [placeholder]="placeholder"
   class="form-control"
-  (keyup.enter)="emitValue( txtInput.value )"
+  [value]="initialValue"
+  [placeholder]="placeholder"
+  (keyup)="onKeyPress(txtInput.value)"
   #txtInput
 />
